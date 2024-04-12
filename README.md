@@ -1,52 +1,19 @@
-# API de Consulta sobre Animais
+# Bem vindos ao Ada Hack - Devops
 
-Esta API fornece informações sobre uma variedade de animais, incluindo o que comem, com o que gostam de brincar e onde vivem.
+Este é um evento de Hackathon da Ada Tech.
 
-**Utilize python versão 3.10 ou superior.**
+## Objetivo
 
-## Estrutura do Projeto
+O objetivo principal deste Hackathon é criar estratégias e desenvolver soluções inovadoras que ajudem a Corp Solutions a aumentar a diversidade e a inclusão em sua equipe. Os participantes deverão criar soluções que promovam uma cultura organizacional mais diversificada e inclusiva, utilizando tecnologia e criatividade para enfrentar esse desafio. O hackathon visa encontrar ideias e projetos que possam ser implementados dentro de ambientes corporativos para impulsionar a diversidade e a inclusão no ambiente de trabalho, contribuindo para o crescimento dessa causa dentro do mercado de trabalho.
 
-```plaintext
-/pasta-raiz
-│
-├── /app                    # Pasta principal da aplicação, onde está localizado o código-fonte da API.
-│   ├── __init__.py         # Arquivo para tornar este diretório um pacote Python.
-│   ├── main.py             # Arquivo principal da aplicação que inicializa a API e inclui as rotas.
-│   ├── models.py           # Modelos de dados usados pela API, definidos usando Pydantic.
-│   └── /routes             # Diretório contendo as rotas/endpoints da aplicação.
-│       ├── __init__.py     # Arquivo para tornar este diretório um pacote Python.
-│       └── animal.py       # Arquivo contendo as rotas específicas para operações de animais.
-│
-├── /tests                  # Pasta contendo os testes para a API.
-│   ├── __init__.py         # Arquivo para tornar este diretório um pacote Python.
-│   └── test_animal_api.py  # Testes automatizados para as rotas da API.
-│
-├── .gitignore              # Lista de arquivos e diretórios que o Git deve ignorar.
-├── README.md               # Documentação do projeto, detalhando a estrutura e instruções de uso.
-└── requirements.txt        # Arquivo listando as dependências necessárias para rodar a aplicação.
-```
+## Desafio
 
-## Como Rodar a Aplicação
+Vocês fazem parte de um time de consultoria da corpsolution, que foi alocado em um projeto em um zoológico. Vocês terão acesso a um projeto e o desafio é criar pipelines de CI/CD relacionados ao tema de Diversidade e Inclusão e configurar a infraestrutura necessária para hospedar e escalar a aplicação API em Python. Eles devem garantir a automação dos processos de construção, teste e implantação da aplicação, seguindo as melhores práticas de DevOps.
 
-Certifique-se de que você tem Python instalado e siga os passos abaixo:
+## API
 
-1. Clone o repositório e navegue até o diretório do projeto.
-2. Crie um ambiente virtual e ative-o:
-   ```bash
-   python -m venv env
-   source env/bin/activate  # No Windows use 'env\Scripts\activate'
-   ```
-3. Instale as dependências:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Inicie a aplicação:
-   ```bash
-   uvicorn app.main:app --reload
-   ```
+Foi fornecido a equipe uma API de consulta sobre animais. A documentação completa da API se encontra [aqui](API.md).
 
-A API estará rodando em `http://127.0.0.1:8000`.
+## Passos para resolução
 
-## Documentação da API
-
-Depois de iniciar a aplicação, acesse `http://127.0.0.1:8000/docs` para visualizar a documentação da API Swagger UI, onde você pode testar os endpoints diretamente pelo navegador.
+Para a resolução do case, foi discutido entre a equipe e o orientador os passos a serem seguidos. Mais detalhes encontra-se [aqui](PASSOS.md).
