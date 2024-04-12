@@ -2,7 +2,7 @@
 
 ## Tecnologias
 
-Foi proposto o uso de tres tecnologias:
+Foi proposto o uso de três tecnologias:
 1. CloudFormation
 2. AWS
 3. GitHub Actions
@@ -11,10 +11,10 @@ Foi proposto o uso de tres tecnologias:
 
 Foi proposto uma lista de tarefas a serem seguidas para melhor andamento do projeto.
 - [x] Subir local manualmente.
-- [ ] Subir em uma EC2 da AWS.
-- [ ] Subir no CloudFormation da AWS.
-- [ ] Fazer o CI/CD no Github Actions.
-- [ ] Melhorias
+- [] Subir em uma EC2 da AWS.
+- [] Subir no CloudFormation da AWS.
+- [] Fazer o CI/CD no Github Actions.
+- [] Melhorias
 
 ## Subir local manualmente
 
@@ -25,12 +25,12 @@ Os passos foram:
 1. Ter o Docker instalado na máquina.
 2. Buildar a imagem do Dockerfile. 
    ```bash
-   docker build -t adahack .  # No Windows use 'env\Scripts\activate'
+   docker build -t adahack .
    ```
 * Observação: o arquivo Dockerfile deve estar na mesma pasta do caminho do terminal. Se não estiver, deve substituir o . (ponto final) pelo caminho do arquivo Dockerfile.
 3. Verificar a Image Id da imagem.
    ```bash
-   docker images # No Windows use 'env\Scripts\activate'
+   docker images
    ```
 4. Rodar a imagem.
    ```bash
