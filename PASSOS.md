@@ -11,10 +11,10 @@ Foi proposto o uso de três tecnologias:
 
 Foi proposto uma lista de tarefas a serem seguidas para melhor andamento do projeto.
 - [x] Subir local manualmente.
-- [] Subir em uma EC2 da AWS.
-- [] Subir no CloudFormation da AWS.
-- [] Fazer o CI/CD no Github Actions.
-- [] Melhorias
+- [ ] Subir em uma EC2 da AWS.
+- [ ] Subir no CloudFormation da AWS.
+- [ ] Fazer o CI/CD no Github Actions.
+- [ ] Melhorias
 
 ## Subir local manualmente
 
