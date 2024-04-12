@@ -18,7 +18,7 @@ Foi proposto uma lista de tarefas a serem seguidas para melhor andamento do proj
 
 ## Subir local manualmente
 
-Primeiramente foi proposto subir o projeto manualmente sem automação local.
+Primeiramente foi proposto subir o projeto manualmente local sem automação.
 A API fornecida já possuia um [Dockerfile](Dockerfile).
 Então, para ver o funcionamento da API, subimos no Docker.
 Os passos foram:
