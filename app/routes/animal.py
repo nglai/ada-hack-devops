@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from ..models import Animal
 
 router = APIRouter()
@@ -26,4 +26,4 @@ async def get_animal(animal_id: int):
     for animal in animals:
         if animal.id == animal_id:
             return animal
-    return {"message": "Animal não encontrado"}
+    raise HTTPException(status_code=404, detail="Animal não encontrado")
