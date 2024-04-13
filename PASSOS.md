@@ -55,15 +55,14 @@ Para mais informações, verificar a documentação da [API](API.md).
 Após subir local, a segunda parte foi subir em uma EC2 da AWS, instalar o Docker na EC2 e rodar a aplicação.
 Os passos foram:
 1. Logar na conta da AWS.
-2. Ir no serviço IAM e criar uma role com as políticas: AmazonEC2RoleforSSM, AmazonSSMManagedInstanceCore e EC2InstanceConnect.
-3. Ir no servico EC2:Security Groups e criar um novo grupo de segurança.
+2. Ir no servico EC2:Security Groups e criar um novo grupo de segurança.
 Nome do grupo de segurança: sg_adahack
 Descrição: Security group for Ada Hack
 Regras de entrada:
-   - HTTP
+   - 80 - HTTP
    - 8000
-4. Ir no serviço EC2.
-5. Criar uma instância nova.
+3. Ir no serviço EC2.
+4. Criar uma instância nova.
 Nome: adahack
 AMI: Amazon Linux (Amazon Linux 2023 AMI)
 Tipo de instância: t2.micro.
@@ -71,31 +70,26 @@ Par de chaves: Prosseguir sem um par de chaves (não recomendado).
 Configurações de rede: 
    - Usar grupo de segurança criado acima.
 Em detalhes avançados:
-   - IAM instance profile: colocar a role criada no passo 2.
    - User data:
    ```bash
    #!/bin/bash
    sudo yum update -y
-   sudo yum install -y docker git
+   sudo yum install docker -y
+   sudo yum install git -y
    sudo service docker start
-   sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
-   sudo chmod +x /usr/bin/docker-compose
-   sudo git clone https://github.com/nglai/ada-hack-devops
+   sudo systemctl enable docker
+   sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   sudo chmod +x /usr/local/bin/docker-compose
+   sudo git clone https://github.com/nglai/ada-hack-devops /path/to/your/folder
+   cd /path/to/your/folder
    sudo docker-compose up -d
    ```
-6. Ainda com a instância selecionada, clicar em connect. Selecionar Session Manager e clicar em Connect para abrir uma janela de terminal.
-7. Checar se o Docker e git estão ok:
-   ```bash
-   docker --version
-   git --version
-   ```
-8. Checar se o container subiu:
-   ```bash
-   docker ps
-   ```
-9. Acessar a api em `IPPublicoDaInstancia:8000`.
+5. Acessar a api em `IPPublicoDaInstancia:8000`.
+Para mais informações, verificar a documentação da [API](API.md).
 
 ## Github Actions
-- Mandar a imagem atualizada para o Docker hub
+
 - Fazer os testes da API
+- Mandar a imagem atualizada para o Docker hub
+
 - Atualiza o cloud formation na AWS
