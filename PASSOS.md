@@ -93,4 +93,4 @@ Em detalhes avançados:
    ```bash
    docker ps
    ```
-9. Acessar a api em `http://127.0.0.1:8000`.
+9. Acessar a api em `IPPublicoDaInstancia:8000`.
