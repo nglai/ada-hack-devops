@@ -94,3 +94,8 @@ Em detalhes avançados:
    docker ps
    ```
 9. Acessar a api em `IPPublicoDaInstancia:8000`.
+
+## Github Actions
+- Mandar a imagem atualizada para o Docker hub
+- Fazer os testes da API
+- Atualiza o cloud formation na AWS
