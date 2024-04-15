@@ -55,4 +55,4 @@ jobs:
         aws-region: us-east-1
 
     - name: Update CloudFormation on AWS
-      run: aws cloudformation deploy --template-file file://cloudformation/ec2.yaml --stack-name adahackcf --capabilities
+      run: aws cloudformation deploy --template-file file://cloudformation/ec2.yaml --stack-name adahackcf
