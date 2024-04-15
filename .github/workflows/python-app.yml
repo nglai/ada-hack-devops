@@ -44,8 +44,9 @@ jobs:
         
     - name: Build and Push Docker Image with Docker Compose
       run: |
-        docker build -t nglai/adahack .
-        docker push nglai/adahack
+        docker rmi --force nglai/adahack:latest
+        docker build -t nglai/adahack:latest . --no-cache
+        docker push nglai/adahack:latest
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v4
@@ -56,4 +57,4 @@ jobs:
 
     - name: Deploy CloudFormation on AWS
       run: aws cloudformation deploy --template-file ./cloudformation/ec2.yaml --stack-name adahackcf
-      
+
