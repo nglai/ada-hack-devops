@@ -56,3 +56,4 @@ jobs:
 
     - name: Deploy CloudFormation on AWS
       run: aws cloudformation deploy --template-file ./cloudformation/ec2.yaml --stack-name adahackcf
+      
