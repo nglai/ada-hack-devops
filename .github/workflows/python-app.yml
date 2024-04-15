@@ -53,4 +53,6 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
-        
+
+    - name: Update CloudFormation on AWS
+      run: aws cloudformation deploy --template-file file://cloudformation/ec2.yaml --stack-name adahackcf --capabilities
