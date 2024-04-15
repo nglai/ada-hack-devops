@@ -55,4 +55,4 @@ jobs:
         aws-region: us-east-1
 
     - name: Deploy CloudFormation on AWS
-      run: aws cloudformation deploy --template-file /cloudformation/ec2.yaml --stack-name adahackcf
+      run: aws cloudformation deploy --template-body file://cloudformation/ec2.yaml --stack-name adahackcf
