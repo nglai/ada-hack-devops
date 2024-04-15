@@ -44,7 +44,6 @@ jobs:
         
     - name: Build and Push Docker Image with Docker Compose
       run: |
-        docker rmi --force nglai/adahack:latest
         docker build -t nglai/adahack:latest . --no-cache
         docker push nglai/adahack:latest
 
