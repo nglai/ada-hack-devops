@@ -54,6 +54,7 @@ Resources:
           sudo chmod +x /usr/local/bin/docker-compose
           sudo git clone https://github.com/nglai/ada-hack-devops /path/to/your/folder
           cd /path/to/your/folder
+          sudo docker rmi -f nglai/adahack
           sudo docker-compose up -d
       Tags:
         - Key: Name
