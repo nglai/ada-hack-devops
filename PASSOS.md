@@ -13,9 +13,9 @@ Foi proposto uma lista de tarefas a serem seguidas para melhor andamento do proj
 - [X] Subir local manualmente no Docker.
 - [X] Testar os endpoints.
 - [X] Entender como a aplicação funciona
-- [ ] Subir em uma EC2 da AWS com Docker.
-- [ ] Subir no CloudFormation da AWS.
-- [ ] Fazer o CI/CD no Github Actions.
+- [X] Subir em uma EC2 da AWS com Docker.
+- [X] Subir no CloudFormation da AWS.
+- [X] Fazer o CI/CD no Github Actions.
 - [ ] Melhorias
 
 ## Subir local manualmente
@@ -89,7 +89,9 @@ Para mais informações, verificar a documentação da [API](API.md).
 
 ## Github Actions
 
+A terceira parte foi fazer uma pipeline no GitHub Actions com as seguintes funções:
 - Fazer os testes da API
 - Mandar a imagem atualizada para o Docker hub
+- Realizar o deploy do cloud formation na AWS
 
-- Atualiza o cloud formation na AWS
+* As secrets foram colocadas localmente no repositório.
