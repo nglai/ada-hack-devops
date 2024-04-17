@@ -21,6 +21,11 @@ Vocês fazem parte de um time de consultoria da corpsolution, que foi alocado em
 
 Foi fornecido a equipe uma API de consulta sobre animais. A documentação completa da API se encontra [aqui](API.md).
 
+## Arquitetura
+
+A arquitetura da infraestrutura implementada:
+![Arquitetura da infraestrutura](arquitetura.jpg)
+
 ## Passos para resolução
 
 Para a resolução do case, foi discutido entre a equipe e o orientador os passos a serem seguidos. Mais detalhes encontra-se [aqui](PASSOS.md).
