@@ -16,7 +16,7 @@ Foi proposto uma lista de tarefas a serem seguidas para melhor andamento do proj
 - [X] Subir em uma EC2 da AWS com Docker.
 - [X] Subir no CloudFormation da AWS.
 - [X] Fazer o CI/CD no Github Actions.
-- [ ] Melhorias
+- [X] Melhorias
 
 ## Subir local manualmente
 
@@ -94,4 +94,5 @@ A terceira parte foi fazer uma pipeline no GitHub Actions com as seguintes funç
 - Mandar a imagem atualizada para o Docker hub
 - Realizar o deploy do cloud formation na AWS
 
-* As secrets foram colocadas localmente no repositório.
+* Foi necessário corrigir os testes da aplicação para todos os testes passarem.
+* As secrets foram colocadas localmente no repositório. Isso garante segurança.
