@@ -9,4 +9,4 @@ app.include_router(animal_router)
 # Rota inicial
 @app.get("/")
 async def read_root():
-    return {"message": "Bem-vindo à API de Consulta sobre Animais de um Zoo"}
+    return {"message": "Bem-vindo à API de Consulta sobre Animais"}
